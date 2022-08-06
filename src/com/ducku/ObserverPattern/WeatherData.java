@@ -1,7 +1,5 @@
 package com.ducku.ObserverPattern;
 
-import com.ducku.ObserverPattern.Observer;
-import com.ducku.ObserverPattern.Subject;
 import java.util.ArrayList;
 
 public class WeatherData implements Subject {
@@ -13,6 +11,30 @@ public class WeatherData implements Subject {
 
   public WeatherData() {
     observers = new ArrayList();
+  }
+
+  public float getTemperature() {
+    return temperature;
+  }
+
+  public void setTemperature(float temperature) {
+    this.temperature = temperature;
+  }
+
+  public float getHumidity() {
+    return humidity;
+  }
+
+  public void setHumidity(float humidity) {
+    this.humidity = humidity;
+  }
+
+  public float getPressure() {
+    return pressure;
+  }
+
+  public void setPressure(float pressure) {
+    this.pressure = pressure;
   }
 
   public void registerObserver(Observer observer) {
@@ -29,7 +51,7 @@ public class WeatherData implements Subject {
   public void notifyObservers() {
     for (int i = 0; i < observers.size(); i++) {
       Observer observer = (Observer) observers.get(i);
-      observer.update(temperature, humidity, pressure);
+      observer.notifyAndDisplay(this);
     }
   }
 

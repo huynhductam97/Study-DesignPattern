@@ -19,6 +19,15 @@ public class NormalDisplay implements Observer, Display {
   }
 
   @Override
+  public void notifyAndDisplay(Subject subject, Object... parameters) {
+    if (subject instanceof WeatherData) {
+      temperature = ((WeatherData) subject).getTemperature();
+      humidity = ((WeatherData) subject).getHumidity();
+      display();
+    }
+  }
+
+  @Override
   public void display() {
     System.out.println(
         "Current conditions: " + temperature + " F degrees and " + humidity + "% humidity");
