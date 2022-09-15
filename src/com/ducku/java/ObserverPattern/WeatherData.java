@@ -1,4 +1,4 @@
-package com.ducku.ObserverPattern;
+package com.ducku.java.ObserverPattern;
 
 import java.util.ArrayList;
 

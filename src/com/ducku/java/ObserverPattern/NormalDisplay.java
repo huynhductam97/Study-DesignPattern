@@ -1,4 +1,4 @@
-package com.ducku.ObserverPattern;
+package com.ducku.java.ObserverPattern;
 
 public class NormalDisplay implements Observer, Display {
 
@@ -9,6 +9,9 @@ public class NormalDisplay implements Observer, Display {
   public NormalDisplay(WeatherData weatherData) {
     this.weatherData = weatherData;
     weatherData.registerObserver(this);
+  }
+
+  public NormalDisplay() {
   }
 
   @Override

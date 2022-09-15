@@ -1,4 +1,4 @@
-package com.ducku.SingletonDesignPattern;
+package com.ducku.java.SingletonDesignPattern;
 
 public class Application {
 

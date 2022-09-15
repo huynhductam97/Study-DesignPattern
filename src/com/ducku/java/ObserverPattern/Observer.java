@@ -1,4 +1,4 @@
-package com.ducku.ObserverPattern;
+package com.ducku.java.ObserverPattern;
 
 public interface Observer {
 
